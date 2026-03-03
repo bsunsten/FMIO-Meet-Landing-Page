@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+/*====COLORS====*/
+.cyan-300 {
+  color: hsl(192, 90%, 77%);
+}
+
+.slate-600 {
+  color: hsl(240, 10%, 57%);
+}
+
+*,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  padding: 4rem 2rem 2rem 2rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 110%;
+  color: hsl(240, 21%, 20%);
+}
+
+h2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 110%;
+  color: hsl(240, 21%, 20%);
+}
+
+a {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 900;
+  color: hsl(240, 21%, 20%);
+  text-decoration: none;
+  color: hsl(0, 0%, 98%);
+}
+
+p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  line-height: 110%;
+  color: hsl(240, 21%, 20%);
+}
+
+.button-blue {
+  background-color: hsl(192, 37%, 48%);
+  border-radius: 2rem;
+  padding-inline: 2.5rem;
+  padding-block: 1rem;
+}
+
+.button-purple {
+  background-color: hsl(268, 34%, 53%);
+  padding-inline: 2.5rem;
+  padding-block: 1rem;
+  border-radius: 2rem;
+}
+
+.number {
+  border: 2px solid hsl(240, 10%, 57%);
+  border-radius: 50%;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,43 @@
+@use "./variables" as *;
+
+//====DESKTOP====
+@mixin text-preset-1($color: $slate-900) {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 110%;
+  color: $color;
+}
+
+@mixin text-preset-2($color: $slate-900) {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 110%;
+  color: $color;
+}
+
+@mixin text-preset-3($color: $cyan-600) {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 110%;
+  color: $color;
+}
+
+@mixin text-preset-4($color: $slate-900) {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  line-height: 110%;
+  color: $color;
+}
+
+@mixin text-preset-5($color: $slate-900) {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 900;
+  color: $color;
+}

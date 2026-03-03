@@ -1,0 +1,19 @@
+@use "./variables" as *;
+
+.button-blue {
+  background-color: $cyan-600;
+  border-radius: 2rem;
+  padding-inline: 2.5rem;
+  padding-block: 1rem;
+}
+.button-purple {
+  background-color: $purple-600;
+  padding-inline: 2.5rem;
+  padding-block: 1rem;
+  border-radius: 2rem;
+}
+
+.number {
+  border: 2px solid $slate-600;
+  border-radius: 50%;
+}
