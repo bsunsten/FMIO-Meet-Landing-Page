@@ -1,19 +1,52 @@
 @use "./variables" as *;
 
+@use "./mixins" as *;
+
 .button-blue {
   background-color: $cyan-600;
   border-radius: 2rem;
   padding-inline: 2.5rem;
   padding-block: 1rem;
+  width: fit-content;
 }
 .button-purple {
   background-color: $purple-600;
   padding-inline: 2.5rem;
   padding-block: 1rem;
   border-radius: 2rem;
+  align-self: center;
+  width: fit-content;
 }
 
 .number {
-  border: 2px solid $slate-600;
+  border: 2px solid $slate-300;
   border-radius: 50%;
+  display: inline-block;
+  padding: 1rem;
+  background-color: $white;
+  position: relative;
+  @include mobile-text-preset-4;
+  line-height: normal;
+  font-weight: 900;
+  letter-spacing: normal;
+}
+
+.line {
+  background-color: $slate-300;
+  width: 1px;
+  height: 6rem;
+  margin: 0 auto;
+  margin-bottom: -2rem;
+}
+
+.image-grid {
+  margin-block: 2rem;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 1rem;
+  img {
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 10px 2px rgb(234, 234, 234);
+    max-width: 100%;
+  }
 }

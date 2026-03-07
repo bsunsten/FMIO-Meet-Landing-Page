@@ -4,7 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 
 *,
-*::before {
+*::before,
+*::after {
   margin: 0;
   box-sizing: border-box;
 }
@@ -15,24 +16,96 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+header {
+  padding: 48px 80px 0px 80px;
 }
 
 .hero {
   display: flex;
-  padding: 4rem 2rem 2rem 2rem;
   flex-direction: column;
+  padding-block: 4rem 2rem;
   gap: 0.5rem;
-  align-items: center;
   text-align: center;
+  grid-template-areas: "left right" "content content";
+  width: 100vw;
 }
 
+.hero-images {
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-img-left {
+  width: 60vw;
+  justify-self: right;
+  grid-area: left;
+  grid-row: 1;
+  margin-left: -10vw;
+}
+
+.hero-img-right {
+  width: 60vw;
+  grid-area: right;
+  grid-row: 1;
+}
+
+.hero-content {
+  margin-top: 2rem;
+  padding-inline: 4rem 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  grid-area: content;
+  grid-row: 2;
+  gap: 1rem;
+}
+
+.description-1 {
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.description-2 {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .number {
+    margin-bottom: -4rem;
+  }
+}
+
+.d2-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 4rem;
+  padding-inline: 2rem;
+  background-image:
+    linear-gradient(rgba(77, 149, 167, 0.75), rgba(77, 149, 167, 0.75)),
+    url("../assets/mobile/image-footer.jpg");
+  background-size: 100%;
+}
+
+img {
+  display: block;
+}
 //DEFAULT FONT STYLES
 h1 {
-  @include text-preset-1;
+  @include mobile-text-preset-1;
 }
 
 h2 {
-  @include text-preset-2;
+  @include mobile-text-preset-2;
 }
 
 a {
@@ -42,5 +115,10 @@ a {
 }
 
 p {
-  @include text-preset-4;
+  @include mobile-text-preset-4;
+}
+
+.tagline {
+  text-transform: uppercase;
+  @include mobile-text-preset-3($cyan-600);
 }
