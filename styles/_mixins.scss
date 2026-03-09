@@ -1,5 +1,6 @@
 @use "./variables" as *;
 
+//MOBILE
 @mixin mobile-text-preset-1($color: $slate-900) {
   font-family: "Red Hat Display", sans-serif;
   font-size: 2.5rem;
@@ -25,11 +26,45 @@
   color: $color;
 }
 
-@mixin mobile-text-preset-4($color: $slate-600) {
+//TABLET
+
+@mixin tablet-text-preset-1($color: $slate-900) {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: $color;
+}
+
+@mixin tablet-text-preset-2($color: $slate-900) {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: $color;
+}
+
+@mixin tablet-text-preset-3($color: $slate-900) {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  color: $color;
+}
+
+@mixin tablet-text-preset-4($color: $slate-900) {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 150%;
+  color: $color;
+}
+
+//DESKTOP
+
+@mixin text-preset-1($color: $slate-900) {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 110%;
   color: $color;
 }
 
@@ -46,15 +81,15 @@
   font-size: 1rem;
   font-weight: 900;
   line-height: 110%;
+  letter-spacing: 0.25rem;
   color: $color;
 }
 
-@mixin text-preset-4($color: $slate-900) {
+@mixin text-preset-4($color: $slate-600) {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.125rem;
-  letter-spacing: 0.25rem;
   font-weight: 500;
-  line-height: 110%;
+  line-height: 150%;
   color: $color;
 }
 

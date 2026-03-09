@@ -16,84 +16,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  overflow-x: clip;
+  max-width: 100vw;
 }
 
 header {
   padding: 48px 80px 0px 80px;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  padding-block: 4rem 2rem;
-  gap: 0.5rem;
-  text-align: center;
-  grid-template-areas: "left right" "content content";
-  width: 100vw;
-}
-
-.hero-images {
-  display: flex;
-  overflow: hidden;
-}
-
-.hero-img-left {
-  width: 60vw;
-  justify-self: right;
-  grid-area: left;
-  grid-row: 1;
-  margin-left: -10vw;
-}
-
-.hero-img-right {
-  width: 60vw;
-  grid-area: right;
-  grid-row: 1;
-}
-
-.hero-content {
-  margin-top: 2rem;
-  padding-inline: 4rem 4rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  grid-area: content;
-  grid-row: 2;
-  gap: 1rem;
-}
-
-.description-1 {
-  padding: 2rem;
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-
-.description-2 {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  .number {
-    margin-bottom: -4rem;
-  }
-}
-
-.d2-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding-block: 4rem;
-  padding-inline: 2rem;
-  background-image:
-    linear-gradient(rgba(77, 149, 167, 0.75), rgba(77, 149, 167, 0.75)),
-    url("../assets/mobile/image-footer.jpg");
-  background-size: 100%;
+main {
+  width: 100%;
 }
 
 img {
@@ -115,10 +47,175 @@ a {
 }
 
 p {
-  @include mobile-text-preset-4;
+  @include tablet-text-preset-4;
+}
+
+.hero {
+  display: grid;
+  padding-block: 4rem 2rem;
+  align-self: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  text-align: center;
+  grid-template-areas: "left right" "content content";
+  overflow-x: clip;
+  width: 100%;
+}
+
+.hero-img-left {
+  justify-self: right;
+  grid-area: left;
+  grid-row: 1;
+  width: 60vw;
+}
+
+.hero-img-right {
+  width: 60vw;
+  grid-area: right;
+  grid-row: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  grid-area: content;
+  grid-row: 2;
+}
+
+.description-1 {
+  padding: 2rem;
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.description-2 {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .number {
+    margin-bottom: -4rem;
+  }
+}
+
+.d2-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 4rem;
+  padding-inline: 2rem;
+  background-image:
+    linear-gradient(rgba(77, 149, 167, 0.75), rgba(77, 149, 167, 0.75)),
+    url("../assets/mobile/image-footer.jpg");
+  background-size: 100%;
 }
 
 .tagline {
   text-transform: uppercase;
   @include mobile-text-preset-3($cyan-600);
+}
+
+//TABLET STYLES
+@media (min-width: 768px) {
+  h1 {
+    @include tablet-text-preset-1;
+  }
+
+  h2 {
+    @include tablet-text-preset-2;
+  }
+
+  .tagline {
+    @include tablet-text-preset-3($cyan-600);
+  }
+
+  .hero-content {
+    max-width: 66%;
+    justify-self: center;
+  }
+
+  .description-1 {
+    padding-block: 3.5rem;
+    padding-inline: 5rem;
+  }
+
+  .d1-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 42rem;
+    padding: 2rem;
+    h2 {
+      margin-bottom: 1rem;
+      padding-inline: 4rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    @include text-preset-1;
+  }
+  p {
+    @include text-preset-4;
+  }
+
+  .tagline {
+    @include text-preset-3;
+  }
+
+  .hero {
+    grid-template-areas: "left content right";
+    gap: 6rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr);
+  }
+
+  .hero-img-left,
+  .hero-img-right {
+    width: auto;
+    height: 80%;
+  }
+
+  .hero-content {
+    grid-row: 1;
+  }
+
+  .description-1 {
+    margin-top: 4rem;
+    padding-block: 3.5rem;
+    padding-inline: 8rem;
+  }
+
+  .d1-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 48rem;
+    padding: 2rem;
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .d2-content {
+    text-align: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-block: 8rem;
+    padding-inline: 6rem;
+    justify-items: center;
+    background-image:
+      linear-gradient(rgba(77, 149, 167, 0.75), rgba(77, 149, 167, 0.75)),
+      url("../assets/desktop/image-footer.jpg");
+  }
 }
