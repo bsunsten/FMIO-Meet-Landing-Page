@@ -222,7 +222,7 @@ p {
   .hero {
     grid-template-areas: "left content right";
     gap: 6rem;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr);
   }
   .hero-img-left,
   .hero-img-right {
